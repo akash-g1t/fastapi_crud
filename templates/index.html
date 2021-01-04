@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Hello World!</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Heading {{ for }}</h1>
+<p>Hello WorldS</p>
+<h4>Request is :</h4>
+<p>{{ request.headers }}</p>
+{% endblock content %}
