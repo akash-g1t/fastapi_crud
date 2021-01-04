@@ -25,7 +25,7 @@ async def get_user(user_id: int):
 @router.post('/create')
 async def create_user(user: UserIn_Pydantic):
     user_obj = await User.create(**user.dict(exclude_unset=True))
-    return await User_Pydantic.from_tortoise_orm(city_user_objobj)
+    return await User_Pydantic.from_tortoise_orm(user_obj)
 
 
 
