@@ -16,8 +16,12 @@ async def users(request: Request):
     })
 
 
+@router.get('/all')
+async def get_all_users():
+    return await User_Pydantic.from_queryset(User.all())
+
 @router.get("/{user_id}")
-async def get_user(user_id: int):
+async def get_single_user(user_id: int):
     return await User_Pydantic.from_queryset_single(User.get(id=user_id))
 
 

@@ -20,6 +20,7 @@ templates = Jinja2Templates(directory="templates")
 register_tortoise(
     app,
     db_url="sqlite://db.sqlite3",
+    # db_url="postgres://test:1234@localhost:5432/fastapi",
     modules={"models": ["models.users_models"]},
     generate_schemas=True,
     add_exception_handlers=True
